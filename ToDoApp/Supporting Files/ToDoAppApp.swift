@@ -11,7 +11,8 @@ import SwiftUI
 struct ToDoAppApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeScreen()
+            ToDoListView().environmentObject(DataStore())
+                .environment(\.colorScheme, .dark)
         }
     }
 }
